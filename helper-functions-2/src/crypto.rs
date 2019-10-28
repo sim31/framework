@@ -1,4 +1,11 @@
+// TODO: implement here
 pub use eth2_hashing::hash;
+
+pub mod public_key;
+
+pub const BLS_SIG_BYTE_SIZE: usize = 96;
+pub const BLS_SECRET_KEY_BYTE_SIZE: usize = 48;
+pub const BLS_PUBLIC_KEY_BYTE_SIZE: usize = 48;
 
 #[cfg(test)]
 mod tests {
