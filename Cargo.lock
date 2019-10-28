@@ -405,8 +405,10 @@ dependencies = [
 name = "helper-functions-2"
 version = "0.1.0"
 dependencies = [
- "bls 0.1.0",
  "eth2_hashing 0.1.0",
+ "eth2_ssz 0.1.2",
+ "milagro_bls 0.11.0 (git+https://github.com/sigp/milagro_bls?tag=v0.11.0)",
+ "rand 0.5.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-hex 2.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "types 0.1.0",
 ]

@@ -22,9 +22,8 @@ pub fn is_slashable_attestation_data(data_1: &AttestationData, data_2: &Attestat
 #[cfg(test)]
 mod tests {
     use super::*;
-    use bls::{PublicKey, SecretKey};
     use std::u64::MAX as epoch_max;
-    use types::primitives::H256;
+    use types::primitives::{PublicKey, SecretKey, H256};
     use types::types::{Checkpoint, Crosslink};
 
     fn default_validator() -> Validator {
