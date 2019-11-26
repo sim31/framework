@@ -22,6 +22,7 @@ pub fn xor_str(bytes_1: &str, bytes_2: &str) -> String {
     string_to_return
 }
 
+// [u8; 32] -> Vec<u8>
 pub fn xor(bytes_1: &[u8], bytes_2: &[u8]) -> Result<Vec<u8>, Error> {
     if bytes_1.len() != 32 || bytes_2.len() != 32 {
         return Err(Error::NotAHash);
@@ -75,6 +76,7 @@ pub fn int_to_bytes(n: u64, length: usize) -> Result<Vec<u8>, Error> {
 }
 
 pub fn bytes_to_int(bytes: &[u8]) -> Result<u64, Error> {
+    // TODO: handle error
     let length = bytes.len();
     let mut nums: Vec<u8> = bytes.to_vec();
     nums.reverse();

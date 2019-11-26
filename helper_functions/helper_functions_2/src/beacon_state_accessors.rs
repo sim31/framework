@@ -98,10 +98,10 @@ pub fn get_active_validator_indices<C: Config>(
     validators
 }
 
-pub fn get_validator_churn_limit<C: Config>(state: &BeaconState<C>) -> u64 {
+pub fn get_validator_churn_limit<C: Config>(state: &BeaconState<C>) -> u64 { //Result<u64, Error>
     let active_validator_indices = get_active_validator_indices(state, get_current_epoch(state));
     let active_validator_count = active_validator_indices.len() as u64;
-    max(MIN_PER_EPOCH_CHURN_LIMIT, active_validator_count)
+    max(MIN_PER_EPOCH_CHURN_LIMIT, active_validator_count) // / Churn limit q...
 }
 
 pub fn get_seed<C: Config>(

@@ -46,6 +46,7 @@ pub fn bls_aggregate_pubkeys(pubkeys: &[PublicKey]) -> AggregatePublicKey {
     }
     aggr_pk
 }
+// ssz funkcijos
 
 #[cfg(test)]
 mod tests {
