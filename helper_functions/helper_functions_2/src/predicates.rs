@@ -488,6 +488,10 @@ mod tests {
                 .attesting_indices
                 .push(0)
                 .expect("Unable to add attesting index");
+            attestation
+                .attesting_indices
+                .push(1)
+                .expect("Unable to add attesting index");
 
             let skey1 = SecretKey::random();
             let pkey1 = PublicKey::from_secret_key(&skey1);
